@@ -1,2 +1,2 @@
-# SC-CAE-FSI
-Sample codes for constituting and training the SC-CAE-FSI model.
+# SC-CAE-NNM FSI model
+Sample codes for constituting and training the SC-CAE-NNM model.
