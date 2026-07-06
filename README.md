@@ -31,11 +31,7 @@ The framework contains three trainable modules:
 
 During training, the predicted latent flow state is decoded back to the physical
 field. The structural response is then updated from pressure lift and viscous
-lift. The viscous force is computed from velocity gradients
-`DUDX`, `DUDY`, `DVDX`, and `DVDY` on the full curvilinear flow grid rather than
-loaded from precomputed viscous-force data.
-
-For each time-advancement step, the fluid and structural states are corrected
+lift. For each time-advancement step, the fluid and structural states are corrected
 through strong-coupling sub-iterations. The default implementation uses
 `l = 5` sub-iterations.
 
@@ -48,7 +44,6 @@ SC-CAE-NNM/
 +-- encoder_decoder_dynamic.py
 +-- viscous_force.py
 +-- training.py
-+-- SampleCodes_SC-CAE-NNM.py
 +-- __init__.py
 +-- requirements.txt
 +-- README.md
@@ -62,7 +57,6 @@ SC-CAE-NNM/
 | `encoder_decoder_dynamic.py` | CAE encoder, CAE decoder, and latent fluid-dynamics network definitions |
 | `viscous_force.py` | Full-field velocity gradients, pressure lift, viscous lift, and structure update |
 | `training.py` | Strong-coupling training loop, loss calculation, optimizer update, and model saving |
-| `SampleCodes_SC-CAE-NNM.py` | Legacy single-file reference version |
 
 The recommended entry point is:
 
