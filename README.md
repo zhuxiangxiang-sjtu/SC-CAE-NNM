@@ -86,15 +86,15 @@ GPU memory growth. GPU device selection can be adjusted in `main.py`.
 
 ## Dataset Preparation
 
-The DNS data files are not included in this repository because of file-size and
+The data files are not included in this repository because of file-size and
 data-management constraints.
 
 Place the required MATLAB files under a local `Data/` directory:
 
 ```text
 Data/
-+-- VIV_displacement_velocity_lift_drag_Re100_hrk2.mat
-+-- VIV_1dof_Re100_XY_UVP.mat
++-- VIV_displacement_velocity_lift_drag_Re200.mat
++-- VIV_1dof_Re200_XY_UVP.mat
 ```
 
 Expected variables are:
@@ -107,7 +107,6 @@ Expected variables are:
 | `velocity_structure` | structural velocity | `(n_snapshots, 1)` |
 | `lift_structure` | total lift force | `(n_snapshots, 1)` |
 | `drag_structure` | total drag force | `(n_snapshots, 1)` |
-| `drag_viscous_structure` | viscous drag force | `(n_snapshots, 1)` |
 
 The code uses the following snapshot split:
 
