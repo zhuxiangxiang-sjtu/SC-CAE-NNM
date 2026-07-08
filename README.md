@@ -18,35 +18,33 @@ Fluid Mechanics*, 2026, vol. 0, A1. doi:10.1017/jfm.2026.11766.
 
 ## Method Overview
 
-The framework contains three trainable modules:
+The framework adopts a strong-coupling strategy and consists of three trainable modules:
 
-- a convolutional autoencoder (CAE) encoder for mapping full-order flow fields
-  to latent modal coordinates;
-- a CAE decoder for reconstructing streamwise velocity, transverse velocity,
+- A convolutional autoencoder (CAE) encoder for mapping high-dimensional flow fields
+  to latent modal coordinates (i.e. nonlinear normal modes, NNMs);
+- A CAE decoder for reconstructing streamwise velocity, transverse velocity,
   and pressure fields from the latent coordinates;
-- a latent-space fluid dynamics prediction module for advancing the modal
-  state with the structural velocity as a coupling input.
+- A latent-space fluid dynamics prediction module for advancing the modal
+  state with the structural velocity as a coupling input;
+- For each time-advancement step, the fluid and structural states are corrected
+through strong-coupling sub-iterations. The default implementation uses
+`l = 5` sub-iterations. 
 
 During training, the predicted latent flow state is decoded back to the physical
-field. The structural response is then updated from the pressure-induced lift
+field. The structural response is then updated from the pressure-induced and viscous-induced lifts
 on the cylinder surface. This release keeps the coupling mechanism explicit and
 focuses on the pressure contribution to the lift force.
-
-For each time-advancement step, the fluid and structural states are corrected
-through strong-coupling sub-iterations. The default implementation uses
-`l = 5` sub-iterations.
 
 ## Repository Structure
 
 ```text
 SC-CAE-NNM/
++-- README.md
 +-- main.py
 +-- data_utils.py
 +-- encoder_decoder_dynamic.py
 +-- compute_force.py
 +-- training.py
-+-- README.md
-+-- .gitignore
 ```
 
 | File | Description |
@@ -132,7 +130,7 @@ python main.py
 Trained models and loss histories are saved to:
 
 ```text
-models/trial1/
+models/
 +-- encoder/
 +-- decoder/
 +-- fluid_dynamics/
