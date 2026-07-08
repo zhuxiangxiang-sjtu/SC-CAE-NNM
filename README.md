@@ -6,8 +6,7 @@ of vortex-induced vibration.
 
 The code is organized for academic reproducibility and method inspection. It
 implements the training pipeline described in the paper, including CAE-based
-flow-field reduction, latent-space dynamics prediction, pressure-lift structure
-response update, and strong fluid-structure coupling iterations.
+flow-field reduction, latent-space dynamics prediction, and strong fluid-structure coupling iterations.
 
 ## Reference
 
