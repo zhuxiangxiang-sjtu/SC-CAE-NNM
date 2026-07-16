@@ -13,7 +13,7 @@ flow-field reduction, latent-space dynamics prediction, and strong fluid-structu
 Xiangxiang Zhu, Shanwu Li, Yong Cao, Shengqi Zhang, Shubin Fu, Zhiping Mao,
 Yongchao Yang, and Shiyi Chen, "A strongly coupled fluid-structure interaction
 network for predictive modelling of vortex-induced vibrations," *Journal of
-Fluid Mechanics*, 2026, vol. 0, A1. doi:10.1017/jfm.2026.11766.
+Fluid Mechanics*, 2026, vol. 1039, A12. doi:10.1017/jfm.2026.11766.
 
 ## Method Overview
 
